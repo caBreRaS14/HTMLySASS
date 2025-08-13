@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV | Landing con HTML + SASS</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">Sebastian cabrera garzon</h1>
+      <nav class="site-nav" aria-label="Redes">
+        <a href="mailto:tuemail@correo.com">tuemail@correo.com</a>
+        <a href="https://linkedin.com/in/tuperfil" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/tuusuario" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1) Información Personal -->
+    <section id="info-personal" class="personal container">
+      <img class="personal__photo" src="1672103796405.jpg" alt="Foto de perfil de Tu Nombre" />
+      <div class="personal__data">
+        <h2 class="personal__name">Sebastian cabrera garzon</h2>
+        <p class="personal__contact">
+          <strong>Email:</strong> <a href="mailto:tuemail@correo.com">tuemail@correo.com</a><br>
+          <strong>Tel:</strong> +57 300 000 0000<br>
+          <strong>Ubicación:</strong> Bogotá, Colombia
+        </p>
+        <div class="personal__links">
+          <a class="btn" href="https://linkedin.com/in/tuperfil" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn--outline" href="https://github.com/tuusuario" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2) Perfil Profesional -->
+    <section id="perfil-profesional" class="teaser container" aria-labelledby="perfil-title">
+      <h2 id="perfil-title" class="teaser__title">Perfil Profesional</h2>
+      <div class="teaser__box">
+        <p>
+          Desarrollador/a web con experiencia en HTML5 semántico, SASS y JavaScript.
+          Me enfoco en interfaces accesibles, rendimiento y buenas prácticas de versión y despliegue.
+        </p>
+      </div>
+    </section>
+
+    <!-- 3) Skills -->
+    <section id="skills" class="skills container" aria-labelledby="skills-title">
+      <h2 id="skills-title" class="skills__title">Skills</h2>
+
+      <div class="skills__grid">
+        <div class="skills__column">
+          <h3 class="skills__subtitle">Skills Técnicos</h3>
+          <ul class="skills__list">
+            <li>HTML5 semántico</li>
+            <li>CSS3 / SASS</li>
+            <li>JavaScript</li>
+            <li>Git & GitHub</li>
+          </ul>
+        </div>
+
+        <div class="skills__column">
+          <h3 class="skills__subtitle">Skills Blandos</h3>
+          <ul class="skills__list">
+            <li>Comunicación</li>
+            <li>Trabajo en equipo</li>
+            <li>Gestión del tiempo</li>
+            <li>Aprendizaje continuo</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; <span id="year"></span> Sebastian cabrera garzon. Todos los derechos reservados.</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

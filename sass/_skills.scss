@@ -1,0 +1,42 @@
+.skills {
+  @include container;
+  padding-block: 2rem 3rem;
+
+  &__title {
+    color: $text;
+    margin-bottom: 1rem;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    @media (max-width: $bp-md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__column {
+    background: $card;
+    border: 1px solid $border;
+    border-radius: $radius;
+    padding: 1rem 1.25rem;
+    box-shadow: $shadow;
+  }
+
+  &__subtitle {
+    margin: 0 0 .5rem 0;
+    color: $text;
+    font-weight: 700;
+  }
+
+  &__list {
+    margin: 0;
+    padding-left: 1.25rem;
+    color: $muted;
+
+    li { margin: .35rem 0; }
+  }
+}

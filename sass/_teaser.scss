@@ -1,0 +1,21 @@
+.teaser {
+  @include container;
+  padding-block: 1rem 2rem;
+
+  &__title {
+    color: $text;
+    margin-bottom: .75rem;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+  }
+
+  &__box {
+    background: $card;
+    border: 1px solid $border;
+    border-radius: $radius;
+    padding: 1.25rem;
+    color: $text;
+    box-shadow: $shadow;
+
+    p { margin: 0; line-height: 1.6; color: $muted; }
+  }
+}

@@ -1,0 +1,57 @@
+.personal {
+  @include container;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1.25rem;
+  align-items: center;
+  padding-block: 2rem;
+
+  &__photo {
+    width: 120px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid $border;
+    box-shadow: $shadow;
+  }
+
+  &__data { color: $text; }
+
+  &__name {
+    margin: 0 0 .25rem 0;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    line-height: 1.2;
+  }
+
+  &__contact {
+    margin: 0 0 .75rem 0;
+    color: $muted;
+
+    a { color: $text; text-underline-offset: 3px; }
+  }
+
+  &__links {
+    display: flex; gap: .5rem; flex-wrap: wrap;
+
+    .btn {
+      @include button-base;
+      background: $primary;
+      color: white;
+      &:hover { background: $primary-600; }
+      &--outline {
+        background: transparent;
+        color: $text;
+        border-color: $border;
+        &:hover { border-color: $primary; color: $primary; }
+      }
+    }
+  }
+
+  @media (max-width: $bp-sm) {
+    grid-template-columns: 1fr;
+    text-align: center;
+
+    &__photo { margin-inline: auto; }
+    &__links { justify-content: center; }
+  }
+}
