@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  background: #0d1117;
+  color: #c9d1d9;
+}
+
+.container {
+  max-width: 520px;
+  margin: 32px auto;
+  padding: 24px;
+  background: #161b22;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+.container h1 {
+  margin: 0 0 16px;
+  font-size: 1.6rem;
+  color: #c9d1d9;
+}
+
+.campo {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.campo label {
+  font-weight: 600;
+}
+.campo input {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #30363d;
+  background: #0b0f14;
+  color: #c9d1d9;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.campo input:focus {
+  border-color: #1f6feb;
+  box-shadow: 0 0 0 3px rgba(31, 111, 235, 0.25);
+}
+.campo input.is-valid {
+  border-color: #2e7d32;
+}
+.campo input.is-invalid {
+  border-color: #d32f2f;
+}
+.campo .error {
+  font-size: 0.85rem;
+  color: #d32f2f;
+  min-height: 1em;
+}
+
+.check .check-label {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+}
+.check .check-label input[type=checkbox] {
+  width: 18px;
+  height: 18px;
+  accent-color: #1f6feb;
+}
+
+button[type=submit] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 0;
+  border-radius: 12px;
+  background: #1f6feb;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.06s ease, opacity 0.2s ease;
+}
+button[type=submit]:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+button[type=submit]:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.exito {
+  margin-top: 16px;
+  padding: 12px;
+  border: 1px solid rgba(46, 125, 50, 0.4);
+  background: rgba(46, 125, 50, 0.12);
+  color: #c9d1d9;
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=styles.css.map */

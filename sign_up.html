@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registro de Usuario</title>
+
+  <!-- CSS compilado desde SASS -->
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Registro de Usuario</h1>
+
+    <form id="registroForm" novalidate>
+      <!-- Nombre completo -->
+      <div class="campo">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" required minlength="3" autocomplete="name" />
+        <small class="error" id="error-nombre" aria-live="polite"></small>
+      </div>
+
+      <!-- Correo -->
+      <div class="campo">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" required autocomplete="email" />
+        <small class="error" id="error-email" aria-live="polite"></small>
+      </div>
+
+      <!-- Contraseña -->
+      <div class="campo">
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" required
+               placeholder="Mín. 8, 1 mayús, 1 número, 1 símbolo" />
+        <small class="error" id="error-password" aria-live="polite"></small>
+      </div>
+
+      <!-- Confirmar contraseña -->
+      <div class="campo">
+        <label for="confirmar">Confirmar contraseña</label>
+        <input type="password" id="confirmar" name="confirmar" required />
+        <small class="error" id="error-confirmar" aria-live="polite"></small>
+      </div>
+
+      <!-- Fecha de nacimiento -->
+      <div class="campo">
+        <label for="fecha">Fecha de nacimiento</label>
+        <input type="date" id="fecha" name="fecha" required />
+        <small class="error" id="error-fecha" aria-live="polite"></small>
+      </div>
+
+      <!-- Celular (Colombia) -->
+      <div class="campo">
+        <label for="celular">Celular (Colombia)</label>
+        <input type="tel" id="celular" name="celular" required inputmode="numeric"
+               pattern="^[3][0-9]{9}$" placeholder="3XXXXXXXXX" />
+        <small class="error" id="error-celular" aria-live="polite"></small>
+      </div>
+
+      <!-- Teléfono opcional -->
+      <div class="campo">
+        <label for="telefono">Teléfono (opcional)</label>
+        <input type="tel" id="telefono" name="telefono" inputmode="numeric" pattern="^[0-9]{10,}$"
+               placeholder="10+ dígitos" />
+        <small class="error" id="error-telefono" aria-live="polite"></small>
+      </div>
+
+      <!-- Términos -->
+      <div class="campo check">
+        <label class="check-label">
+          <input type="checkbox" id="terminos" required />
+          Acepto los términos y condiciones
+        </label>
+        <small class="error" id="error-terminos" aria-live="polite"></small>
+      </div>
+
+      <!-- Botón -->
+      <button type="submit" id="btnEnviar" disabled>Enviar</button>
+    </form>
+
+    <p id="mensajeExito" class="exito" hidden>Registro exitoso 🎉</p>
+
+    <section class="cta container">
+      <h2 class="cta__title">¿Quieres registrarte?</h2>
+      <a href="index.html" class="btn">Ir al portafolio</a>
+    </section>
+  </main>
+
+  <script src="./validaciones.js"></script>
+</body>
+</html>
